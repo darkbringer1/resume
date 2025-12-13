@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, main ]
   pull_request:
-    branches: [ master ]
+    branches: [ master, main ]
 
 jobs:
   compile:
@@ -13,14 +13,22 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v4
-      - name: Run the build process with Docker
-        uses: addnab/docker-run-action@v3
+      - name: Build PDFs (Docker)
+        run: |
+          bash ./build.sh Dogukaan-Kilicarslan-CV.tex Dogukaan-Kilicarslan-CV-DE.tex
+
+      - name: Upload PDFs
+        uses: actions/upload-artifact@v4
         with:
-          image: thomasweise/docker-texlive-full:latest
-          options: -v ${{ github.workspace }}:/data
-          run: |
-            cd data
-            pdflatex sourabh_bajaj_resume.tex
-      - uses: stefanzweifel/git-auto-commit-action@v5
+          name: resume-pdfs
+          path: |
+            Dogukaan-Kilicarslan-CV.pdf
+            Dogukaan-Kilicarslan-CV-DE.pdf
+
+      # If you want CI to commit generated artifacts back to the repo, keep this step.
+      # It's disabled for pull requests (often read-only) to avoid permission failures.
+      - name: Auto-commit generated PDFs
+        if: github.event_name == 'push'
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: Apply pdflatex changes
+          commit_message: "CI: rebuild PDFs"

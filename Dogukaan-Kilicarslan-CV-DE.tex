@@ -1,0 +1,192 @@
+%-------------------------
+% Resume in LateX
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[german]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://github.com/dogukaankilicarslan}{\Large Dogukaan Kilicarslan}} & E-Mail: \href{mailto:dogukaankilicarslan@gmail.com}{dogukaankilicarslan@gmail.com}\\
+  \href{https://github.com/dogukaankilicarslan}{github.com/dogukaankilicarslan} & Mobil: \href{tel:+905326269925}{+90-532-626-9925} \\
+  Berlin, Deutschland & \\
+\end{tabular*}
+
+%-----------EXPERIENCE-----------------
+\section{Berufserfahrung}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {MigrosOne}{Remote}
+      {iOS-Entwickler}{Dezember 2023 -- Aktuell}
+      \resumeItemListStart
+        \resumeItem{Migrationsprojekt}
+          {Migrierte eine 1,4M-Zeilen-Codebasis von CocoaPods zu Swift Package Manager in 6 Wochen, reduzierte die Clean-Build-Zeit um 40\% und beseitigte Workspace-Merge-Konflikte.}
+        \resumeItem{Architektur-Refactoring}
+          {Refaktorierte den Checkout-Flow in 10 unabhängige MVVM-Module, ermöglichte parallele Entwicklung durch 3 Entwickler und reduzierte die PR-Zykluszeit um 30\%.}
+        \resumeItem{Leistungsoptimierung}
+          {Optimierte UIKit-Rendering-Hotspots, hielt tägliche Abstürze unter 0,1\% bei 880K täglich aktiven Nutzern und erhielt eine 4,8-App-Store-Bewertung.}
+        \resumeItem{CI/CD-Pipeline}
+          {Richtete Xcode Cloud + Bitrise-Pipelines ein, reduzierte Test-Build-Zeiten von 1-2 Tagen auf 2 Stunden.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Hepsiburada}{Remote}
+      {iOS-Entwickler}{September 2021 -- Dezember 2023}
+      \resumeItemListStart
+        \resumeItem{Nutzerwachstum}
+          {Verdoppelte aktive Nutzer in 12 Monaten durch Bereitstellung von über 20 Features in einer Super-App für Verkäufer; verbesserte die Bewertung von 2,3 auf 4,7.}
+        \resumeItem{Codequalität}
+          {Entwickelte Legacy-Bildschirme zu VIPER um, verbesserte absturzfreie Sitzungen von 98,5\% auf 99,7\%.}
+        \resumeItem{Entwicklungswerkzeuge}
+          {Erstellte Bash-Skripte, die Modulvorlagen generieren und Coding-Standards durchsetzen.}
+        \resumeItem{Leistungsprofilerstellung}
+          {Leitete Leistungsprofilerstellung mit Instruments; behob zwei kritische Speicherlecks, reduzierte den App-RAM-Verbrauch um 50\%.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Freiberuflich}{Remote}
+      {Lead iOS Engineer}{Februar 2023 -- Aktuell}
+      \resumeItemListStart
+        \resumeItem{Architekturdesign}
+          {Entwickelte ein SwiftUI-Produkt mit The Composable Architecture (TCA); leitete 3 Entwickler, führte Code-Owners \& automatisiertes Linting ein, erreichte absturzfreie Sitzungen von 99,8\%.}
+        \resumeItem{Entwicklererfahrung}
+          {Entwickelte benutzerdefinierte CLI-Tools zum Scaffolding von Features und zur Durchsetzung geschichteter neuer Module, reduzierte die Onboarding-Zeit für neue Mitwirkende um 80\%.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Ausbildung}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Boğaziçi Universität}{Istanbul, Türkei}
+      {Master of Science in Software Engineering}{2025 -- Aktuell}
+    \resumeSubheading
+      {Atılım Universität}{Ankara, Türkei}
+      {Bachelor of Science in Avionik-Wartungstechnik}{}
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Führung \& Aktivitäten}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Swift Buddies Community für iOS-Entwickler}
+      {Gründete und entwickelte eine persönliche iOS-Community, veranstaltete entspannte Treffen, bei denen Entwickler aller Niveaus Wissen teilen, netzwerken und zusammenarbeiten. (August 2021 -- Aktuell)}
+    \resumeSubItem{iOS Developers Community App}
+      {Leitete eine von der Community betriebene App, die als Zentrum für Entwicklernetzwerke, Ressourcen und Veranstaltungen dient, iterierte Features basierend auf Nutzerfeedback. (Februar 2024 -- Aktuell)}
+    \resumeSubItem{AWS/DevOps \& Go Development Bootcamp-Assistent}
+      {Arbeitete während des Unterrichts mit dem Lehrer zusammen und übernahm die Anwesenheitskontrolle der Studenten. Nahm Sitzungen auf und lud sie hoch. Bewertete Hausaufgaben und betreute persönlich jeden Studenten. (April 2022 -- September 2022)}
+    \resumeSubItem{Blah Blah English Speaking Club}
+      {Mitbegründete und moderierte wöchentliche Online-Sitzungen für Nicht-Muttersprachler, wählte gemeinsam Themen aus und moderierte, um alle Teilnehmer einzubinden. (Juli 2020 -- Aktuell)}
+  \resumeSubHeadingListEnd
+
+%
+%--------SKILLS------------
+\section{Fähigkeiten}
+  \resumeSubHeadingListStart
+    \item{
+      \textbf{Programmiersprachen}{: Swift, Python, Bash}
+      \hfill
+      \textbf{Frameworks}{: SwiftUI, UIKit, RxSwift, Combine, TCA}
+    }
+    \item{
+      \textbf{Architektur}{: MVVM, VIPER, TCA, SOLID-Prinzipien, Design Patterns}
+      \hfill
+      \textbf{Werkzeuge}{: Xcode, Instruments, Git, CI/CD}
+    }
+    \item{
+      \textbf{Sprachen}{: Englisch (C1), Türkisch (Muttersprache), Deutsch (Grundkenntnisse)}
+    }
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
+

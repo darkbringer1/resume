@@ -17,3 +17,10 @@ Archieve/
 
 # github action result
 semicolon_delimited_script
+
+# CV source and output files
+*.tex
+*.pdf
+
+# macOS
+.DS_Store

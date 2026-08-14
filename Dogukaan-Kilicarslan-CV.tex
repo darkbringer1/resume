@@ -1,212 +1,229 @@
 %-------------------------
-% Resume in LateX
-% Author : Sourabh Bajaj
-% License : MIT
+% Resume in LaTeX
+% Candidate: Dogukaan Kilicarslan
 %------------------------
-
-\documentclass[letterpaper,11pt]{article}
-
+ 
+\documentclass[a4paper,11pt]{article}
+ 
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+% Type-1 outline font -- required for clean ATS text extraction under T1 encoding.
+\IfFileExists{lmodern.sty}{\usepackage{lmodern}}{\IfFileExists{mathptmx.sty}{\usepackage{mathptmx}}{}}
 \usepackage{latexsym}
+\usepackage[usenames,dvipsnames]{color}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage[hidelinks,
+            pdftitle={Dogukaan Kilicarslan --- Senior iOS Engineer},
+            pdfauthor={Dogukaan Kilicarslan},
+            pdfsubject={Curriculum Vitae},
+            pdfkeywords={iOS Engineer, Senior iOS Developer, Swift, SwiftUI, UIKit,
+                         Swift Concurrency, Combine, Swift Package Manager, Tuist,
+                         MVVM, VIPER, TCA, Clean Architecture, Dependency Injection,
+                         XCTest, CI/CD, Fastlane, Xcode Cloud, Bitrise, App Store Connect,
+                         TestFlight, Kotlin Multiplatform, REST, GraphQL, Core Data,
+                         Fintech, Payments, Berlin, Germany}]{hyperref}
 \input{glyphtounicode}
-
+ 
 \pagestyle{fancy}
-\fancyhf{} % Clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
+ 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
-
+ 
 \urlstyle{same}
-
+ 
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
-
+ 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-4pt}\bfseries\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate PDF is machine readable/ATS parsable
+ 
+% Ensure generated PDF is machine readable / ATS parsable
 \pdfgentounicode=1
-
+ 
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
+    \textbf{#1} --- #2\vspace{-2pt}
   }
 }
-
-% Just in case someone needs a heading that does not need to be in a list
-\newcommand{\resumeHeading}[4]{
-    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+ 
+\newcommand{\resumeItemPlain}[1]{
+  \item\small{
+    #1\vspace{-2pt}
+  }
 }
-
+ 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
+  \vspace{2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+      \textbf{#1} & \small#2 \\
+      \small\textbf{#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+ 
+% Education entry -- degree stays italic so it doesn't compete with the institution
+\newcommand{\resumeEducation}[4]{
+  \vspace{2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small#2 \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-5pt}
 }
-
+ 
+% Second position held at the same employer
+\newcommand{\resumeSubPosition}[2]{
+    \vspace{6pt}
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small\textbf{#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+ 
 \newcommand{\resumeSubSubheading}[2]{
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-5pt}
 }
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-
-\renewcommand{\labelitemii}{$\circ$}
-
+ 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
+ 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
+ 
 \begin{document}
-
+ 
 %----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://github.com/darkbringer1}{\Large Dogukaan Kilicarslan}} & Email: \href{mailto:dogukaankilicarslan@gmail.com}{dogukaankilicarslan@gmail.com}\\
-  \href{https://github.com/darkbringer1}{github.com/darkbringer1} & Mobile: \href{tel:+4915253516627}{+49-152-53516627} \\
-  Berlin, Germany & \\
-\end{tabular*}
-
+\begin{center}
+    \textbf{\huge Dogukaan Kilicarslan} \\ \vspace{4pt}
+    \small \textbf{Senior iOS Engineer} --- Berlin, Germany \\ \vspace{4pt}
+    \href{mailto:dogukaankilicarslan@gmail.com}{dogukaankilicarslan@gmail.com} $|$
+    \href{tel:+4915253516627}{+49 152 53516627} \\ \vspace{2pt}
+    \href{https://www.linkedin.com/in/dogukaan-kilicarslan}{linkedin.com/in/dogukaan-kilicarslan} $|$
+    \href{https://github.com/darkbringer1}{github.com/darkbringer1}
+\end{center}
+ 
+%-----------SUMMARY-----------------
+\section{Summary}
+\small{Senior-level iOS engineer with \textbf{five years} of experience building and modernizing large-scale consumer and financial applications --- an 880K-DAU commerce super-app and a \textbf{production banking SDK} for a regulated financial institution. Depth in \textbf{iOS platform engineering} (Swift Package Manager migration across a 1.4M-LOC codebase, a custom dependency injection framework, CI/CD built from scratch, modularization) alongside end-to-end product ownership in SwiftUI and UIKit. Effective at inheriting a large, unfamiliar codebase, understanding why it works the way it does, and improving it without slowing delivery. Based in Berlin; working language English.}
+ 
+%--------SKILLS------------
+\section{Skills}
+  \begin{itemize}[leftmargin=*, label={}]
+    \small{\item{
+     \textbf{Languages:} {Swift, Objective-C, Python, Bash} \\
+     \textbf{UI \& Frameworks:} {SwiftUI, UIKit, Swift Concurrency (async/await), Combine, RxSwift, Core Data, AVFoundation} \\
+     \textbf{Architecture:} {MVVM, VIPER, TCA, Clean Architecture, SOLID, modularization, dependency injection} \\
+     \textbf{Platform \& Tooling:} {Swift Package Manager, Tuist, CocoaPods, Fastlane, Xcode Cloud, Bitrise, Azure DevOps, Git, Instruments} \\
+     \textbf{Testing \& Release:} {XCTest, unit \& integration testing, code coverage, App Store Connect, TestFlight, release management} \\
+     \textbf{Networking \& Data:} {URLSession, REST, GraphQL (Apollo), Moya, Firebase, Kotlin Multiplatform interop} \\
+     \textbf{Domains:} {Payments \& checkout, consumer banking, e-commerce, SDK development, legacy modernization} \\
+     \textbf{Spoken Languages:} {English (C1), Turkish (native), German (A1, learning)} \\
+     \textbf{Work Authorization:} {Eligible to work in Germany/EU --- no visa sponsorship required}
+    }}
+  \end{itemize}
+ 
 %-----------EXPERIENCE-----------------
 \section{Experience}
+\enlargethispage{2\baselineskip}
   \resumeSubHeadingListStart
-
+ 
     \resumeSubheading
-      {MoneyPay — MigrosFinance}{Remote}
-      {iOS Developer}{June 2025 -- Present}
+      {Migros Ticaret \textnormal{\small\textit{--- Turkey's largest retail group}}}{Remote (Berlin / Istanbul)}
+      {Senior iOS Engineer $\cdot$ MoneyPay / MigrosFinance \textnormal{\textit{(consumer banking)}}}{June 2025 -- Present}
       \resumeItemListStart
-        \resumeItem{CI/CD Pipeline}
-          {Built an end-to-end CI/CD pipeline from scratch that aggregates 6+ independently-versioned XCFrameworks from multiple upstream pipelines into a single SPM package, with automated semantic versioning, dependency verification, changelog generation, and dual-target distribution to both the client's protected GitHub and internal Azure DevOps — serving as the sole delivery mechanism for the MigrosFinance production banking app.}
-        \resumeItem{Dependency Injection Framework}
-          {Designed a custom dependency injection framework with graph-based resolution (topological sort + cycle detection), three-tier lifecycle management (singleton/transient/flow-scoped), and @MainActor thread safety — powering 31 service modules across the SDK.}
-        \resumeItem{Feature Delivery}
-          {Owned 7 feature modules (\textasciitilde80+ screens) end-to-end in SwiftUI/MVVM as one of 2 iOS engineers --- from first commit through release --- including account onboarding, paginated transaction history, consumer loan application lifecycle, and money transfer workflows, turning dense financial and regulatory requirements into flows that real customers trust their money to every day.}
-        \resumeItem{Testing Infrastructure}
-          {Built the project's testing infrastructure from scratch: designed testcontainers with mock injection, authored 31 test files spanning unit/integration/presentation layers, 9 reusable mocks, and CI-integrated pipelines with code coverage reporting.}
-        \resumeItem{Reusable Components}
-          {Developed 18+ reusable SwiftUI components including a UIViewRepresentable IBAN input with auto-formatting and paste sanitization, OTP verification system with configurable timers, and currency-aware amount input controllers.}
-        \resumeItem{Backend Integration}
-          {Hardened backend-driven experiences across the Kotlin Multiplatform shared module --- API controllers, network interceptors with retry and graceful failure handling, and localization across 12+ feature modules --- keeping data flows resilient on both iOS and Android.}
+        \resumeItem{CI/CD \& release engineering}
+          {Built the delivery pipeline for a \textbf{production banking app} from scratch: aggregates 6+ independently versioned XCFrameworks from separate upstream pipelines into a single Swift Package, with automated semantic versioning, dependency verification, changelog generation, and dual distribution to the client's protected GitHub and internal Azure DevOps. Sole delivery mechanism for the MigrosFinance production app.}
+        \resumeItem{Dependency injection framework}
+          {Designed a graph-based DI container --- topological resolution with cycle detection, three lifecycle scopes (singleton / transient / flow-scoped), and \texttt{@MainActor} thread safety --- powering 31 service modules across the SDK.}
+        \resumeItem{Feature ownership}
+          {As one of two iOS engineers, owned \textbf{7 feature modules (80+ screens)} end-to-end in SwiftUI/MVVM: account onboarding, paginated transaction history, consumer loan application lifecycle, and money transfers --- translating dense financial and regulatory requirements into flows customers trust with their money.}
+        \resumeItem{Testing infrastructure}
+          {Introduced the project's first test suite: test containers with mock injection, 31 test files across unit, integration, and presentation layers, 9 reusable mocks, and CI-integrated code coverage reporting.}
+        \resumeItem{Design system}
+          {Built 18+ reusable SwiftUI components, including a \texttt{UIViewRepresentable} IBAN field with auto-formatting and paste sanitization, a configurable OTP verification system, and currency-aware amount inputs.}
+        \resumeItem{Cross-platform integration}
+          {Hardened backend-driven experiences in a shared Kotlin Multiplatform module --- API controllers, network interceptors with retry and graceful failure handling, and localization across 12+ feature modules --- keeping data flows consistent across iOS and Android.}
       \resumeItemListEnd
-
+ 
+    \resumeSubPosition
+      {iOS Engineer $\cdot$ MigrosOne \textnormal{\textit{(Migros Sanal Market --- Turkey's largest online grocer)}}}{December 2023 -- June 2025}
+      \resumeItemListStart
+        \resumeItem{Dependency migration}
+          {Migrated a \textbf{1.4M-LOC} codebase from CocoaPods to Swift Package Manager in \textbf{6 weeks}, cutting clean-build time 40\% and eliminating workspace merge conflicts. Introduced Tuist for project generation and a shared Utilities package to move reusable infrastructure out of app-level code.}
+        \resumeItem{Checkout \& payments}
+          {Refactored checkout into 10 independent MVVM modules and untangled a legacy payment flow spanning wallet, Masterpass, and multiple commerce verticals --- enabling 3 developers to work in parallel and reducing PR cycle time 30\%.}
+        \resumeItem{Networking infrastructure}
+          {Replaced scattered \texttt{URLSession} usage with a centralized API layer, adding an authentication gate, async request execution, multipart and download handling, and environment selection.}
+        \resumeItem{Delivery timeslots}
+          {Rebuilt the timeslot experience, where availability resolves against store, vertical, delivery method, selected address, and cart state.}
+        \resumeItem{Performance \& stability}
+          {Profiled and optimized UIKit rendering hotspots on an app with an iOS 12 minimum deployment target, contributing to a sustained daily crash rate below 0.1\% at \textbf{880K DAU} and a 4.8 App Store rating.}
+        \resumeItem{CI/CD}
+          {Set up Xcode Cloud and Bitrise pipelines, reducing test build turnaround from 1--2 days to roughly 2 hours.}
+      \resumeItemListEnd
+ 
+    \pagebreak
     \resumeSubheading
-      {MigrosOne — Migros Sanal Market}{Remote}
-      {iOS Developer}{December 2023 -- Present}
+      {Hepsiburada \textnormal{\small\textit{--- Turkey's largest e-commerce marketplace (Nasdaq: HEPS)}}}{Remote}
+      {iOS Engineer}{September 2021 -- December 2023}
       \resumeItemListStart
-        \resumeItem{Migration Project}
-          {Migrated 1.4M-LOC codebase from CocoaPods to Swift Package Manager in 6 weeks, cutting clean-build time 40\% and eliminating workspace merge conflicts.}
-        \resumeItem{Architecture Refactoring}
-          {Refactored checkout flow into 10 independent MVVM modules, enabling parallel development by 3 developers and reducing PR cycle time 30\%.}
-        \resumeItem{Performance Optimization}
-          {Optimized UIKit rendering hotspots, holding daily crashes below 0.1\% for 880K DAU and sustaining a 4.8 App Store rating.}
-        \resumeItem{CI/CD Pipeline}
-          {Set up Xcode Cloud + Bitrise pipelines, trimming test build times from 1-2 days to 2 hours.}
+        \resumeItem{Feature delivery}
+          {Shipped 20+ features on the seller-facing app of the marketplace, during a period in which active users doubled and the App Store rating rose from 2.3 to 4.7.}
+        \resumeItem{Legacy modernization}
+          {Re-engineered legacy screens onto VIPER with modularized feature boundaries and clear testable seams; crash-free sessions improved from 98.5\% to 99.7\%.}
+        \resumeItem{Performance profiling}
+          {Led Instruments-based profiling; resolved two critical memory leaks, \textbf{halving the app's RAM footprint}.}
+        \resumeItem{Developer tooling}
+          {Authored Bash tooling to scaffold module templates and enforce coding standards across the team.}
       \resumeItemListEnd
-
-    \resumeSubheading
-      {Hepsiburada}{Remote}
-      {iOS Developer}{September 2021 -- December 2023}
-      \resumeItemListStart
-        \resumeItem{User Growth}
-          {Doubled active users in 12 months by shipping 20+ features on a seller-facing super-app; lifted rating from 2.3 to 4.7.}
-        \resumeItem{Code Quality}
-          {Re-engineered legacy screens to VIPER following Clean Code principles, raising crash-free sessions from 98.5\% to 99.7\%.}
-        \resumeItem{Development Tooling}
-          {Authored Bash scripts that generate module templates and enforce coding standard.}
-        \resumeItem{Performance Profiling}
-          {Led performance profiling with Instruments; resolved two critical memory leaks, reducing app RAM footprint 50\%.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Freelance}{Remote}
-      {Lead iOS Engineer}{February 2023 -- Present}
-      \resumeItemListStart
-        \resumeItem{Architecture Design}
-          {Architecting a SwiftUI product with The Composable Architecture (TCA); manage 3 devs, institute code-owners \& automated linting, achieving crash-free sessions of 99.8\%.}
-        \resumeItem{Developer Experience}
-          {Built custom CLI tooling to scaffold features and enforce layered new modules, shaving onboarding time for new contributors by 80\%.}
-      \resumeItemListEnd
-
+ 
   \resumeSubHeadingListEnd
-
+ 
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
-    \resumeSubheading
-      {Bogazici University}{Istanbul, Turkey}
-      {Master of Science in Software Engineering}{2025 -- Current}
-    \resumeSubheading
-      {Atilim University}{Ankara, Turkey}
-      {Bachelor of Science in Avionics Maintenance Engineering}{}
+    \resumeEducation
+      {Boğaziçi University}{Istanbul, Turkey}
+      {MSc in Software Engineering \textnormal{\textit{(part-time, remote)}}}{2025 -- Present}
+    \resumeEducation
+      {Atılım University}{Ankara, Turkey}
+      {BSc in Avionics Maintenance Engineering \textnormal{\textit{(full scholarship)}}}{}
   \resumeSubHeadingListEnd
-
-
-%-----------PROJECTS-----------------
-\section{Leadership \& Activities}
+ 
+%-----------LEADERSHIP & COMMUNITY-----------------
+\section{Leadership \& Community}
   \resumeSubHeadingListStart
-    \resumeSubItem{Swift Buddies Community for iOS Developers}
-      {Founded and grew an in-person iOS community, hosting relaxed meetups where developers of all levels share knowledge, network, and collaborate. (August 2021 -- Present)}
-    \resumeSubItem{iOS Developers Community App}
-      {Spearheaded a community-driven app that serves as a hub for developer networking, resources, and events, iterating features based on user feedback. (February 2024 -- Present)}
-    \resumeSubItem{Personal Audio Projects}
-      {Built iOS apps leveraging AVFoundation for audio playback, recording, and real-time signal processing; explored Core Audio APIs for low-latency audio pipelines on iOS and macOS.}
-    \resumeSubItem{AWS/DevOps \& Go Development Bootcamp Assistant}
-      {Collaborate with the teacher during the class and take absence of students. Record and upload the session. Evaluate the homework and personally mentor every student. (April 2022 -- September 2022)}
-    \resumeSubItem{Blah Blah English Speaking Club}
-      {Co-founded and hosted weekly online sessions for non-native English speakers, co-selecting topics and moderating to keep everyone engaged. (July 2020 -- Present)}
+    \resumeItem{Founder, SwiftBuddies (2021 -- Present)}
+      {Built an in-person iOS/Swift developer community in Istanbul running regular meetups across Kadıköy, Beşiktaş, and Ankara; currently establishing the Berlin chapter as TechBuddies Berlin, broadening into mobile, AI, and open source.}
+    \resumeItem{Contributor, iOS Developers Community App (2024 -- Present)}
+      {Open-source app for developer networking, resources, and events.}
+    \resumeItem{Independent iOS Consulting}
+      {Architected a SwiftUI product on The Composable Architecture (TCA), guiding a team of 3 and introducing code owners and automated linting to sustain 99.8\% crash-free sessions; built CLI tooling to scaffold features and enforce layered module structure.}
   \resumeSubHeadingListEnd
-
-%
-%--------SKILLS------------
-\section{Skills}
-  \resumeSubHeadingListStart
-    \item{
-      \textbf{Languages}{: Swift, Objective-C, Python, Bash}
-      \hfill
-      \textbf{Frameworks}{: SwiftUI, UIKit, Swift Concurrency, Combine, RxSwift, TCA}
-    }
-    \item{
-      \textbf{Architecture}{: MVVM, VIPER, TCA, SOLID Principles, Clean Code}
-      \hfill
-      \textbf{Tools}{: Xcode, Instruments, XCTest, Git, CI/CD}
-    }
-    \item{
-      \textbf{Spoken Languages}{: English (C1), Turkish (Native)}
-      \hfill
-      \textbf{Interests}{: Playing guitar, working out, museums and art galleries, gardening, and reading}
-    }
-  \resumeSubHeadingListEnd
-
+ 
+%-----------INTERESTS-----------------
+\section{Interests}
+\small{Guitar, weightlifting, museums and galleries, gardening, reading.}
+ 
 %-------------------------------------------
 \end{document}
+ 

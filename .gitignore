@@ -19,7 +19,6 @@ Archieve/
 semicolon_delimited_script
 
 # CV source and output files
-*.tex
 *.pdf
 
 # macOS
